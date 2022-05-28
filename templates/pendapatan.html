@@ -1,0 +1,28 @@
+{% extends 'about.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h2>Laporan pendapatan</h2>
+    <table class="table table-bordered table-hover">
+       <thead>
+       <tr>
+           <th>ID</th>
+           <th>Tanggal</th>
+           <th>Harga</th>
+       </tr>
+       </thead>
+     
+           <tbody>
+             {% for row in account %}
+             <tr>
+                <td>{{ row['keuangan'] }}</td>
+                <td>{{ row['tanggal'] }}</td>
+                <td>{{ row['rupiah'] }}</td>
+             </tr>
+          {% endfor %}
+           </tbody>
+    </table>
+    <a href="{{ url_for('about') }}" class="btn">kembali</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Keuanganku</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<h1>Website Keuanganku <br/> DEMO</h1>
+	<div class="kotak_login">
+		<p class="tulisan_login">Silahkan register</p>
+		<form action="{{ url_for('register') }}" method="post">
+            <div class="msg">{{ msg }}</div>
+            <label>Username</label>
+            <input id="username" name="username" type="text" class="form_login" placeholder="username ..">
+            <label>Email</label>
+            <input id="email" name="email" type="text" class="form_login" placeholder="email ..">
+            <label>Password</label>
+            <input id="password" name="password" class="form_login" placeholder="Password ..">
+            <input type="submit" class="tombol_login" value="Sign Up">
+            <br/>
+            <br/>
+            <center>
+                <a class="link" href="{{url_for('login')}}">Login</a>
+            </center>
+		</form>
+		
+	</div>
+</body>
+</html>
