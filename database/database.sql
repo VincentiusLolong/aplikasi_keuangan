@@ -12,7 +12,7 @@ CREATE TABLE if NOT EXISTS accounts(
 CREATE TABLE if NOT EXISTS accounts_accounting(
 	keuangan INT(11) NOT NULL AUTO_INCREMENT,
 	tanggal DATE NOT NULL,
-	rupiah VARCHAR(255) NOT NULL,
+	rupiah INT(255) NOT NULL,
 	jenis VARCHAR(100) NOT NULL,
 	user_id INT(11) NOT NULL,
 	FOREIGN KEY (user_id) REFERENCES accounts(user_id)
